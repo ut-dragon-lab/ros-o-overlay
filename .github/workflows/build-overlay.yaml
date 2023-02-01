@@ -1,0 +1,29 @@
+name: build-overlay
+
+on:
+  workflow_dispatch:
+  push:
+
+jobs:
+  build-overlay:
+    runs-on: ubuntu-22.04
+    env:
+      ROS_DISTRO: one
+      DEB_DISTRO: jammy
+    steps:
+      - uses: v4hn/ros-deb-builder-action@rosotest
+        with:
+          ROS_DISTRO: ${{ env.ROS_DISTRO }}
+          DEB_DISTRO: ${{ env.DEB_DISTRO }}
+          REPOS_FILE: sources.repos
+          ROSDEP_SOURCE: |
+            rosdep.yaml
+            https://raw.githubusercontent.com/v4hn/ros-o-builder/main/rosdep.yaml
+            https://raw.githubusercontent.com/v4hn/ros-o-builder/jammy-one/local.yaml
+          DEB_REPOSITORY: |
+            deb [trusted=yes] https://raw.githubusercontent.com/v4hn/ros-o-builder/jammy-one/ ./
+          CONTINUE_ON_ERROR: false
+
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PUSH_ON_ERROR: true
+          SQUASH_HISTORY: true

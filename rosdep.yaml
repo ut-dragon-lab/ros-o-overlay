@@ -1,0 +1,3 @@
+python:
+  ubuntu:
+    - python3
