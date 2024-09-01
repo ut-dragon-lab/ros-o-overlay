@@ -22,7 +22,7 @@ jobs:
             https://raw.githubusercontent.com/v4hn/ros-o-builder/jammy-one-unstable/local.yaml
           DEB_REPOSITORY: |
             deb [trusted=yes] https://raw.githubusercontent.com/v4hn/ros-o-builder/jammy-one-unstable/ ./
-          CONTINUE_ON_ERROR: false
+          CONTINUE_ON_ERROR: true
 
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           PUSH_ON_ERROR: true
