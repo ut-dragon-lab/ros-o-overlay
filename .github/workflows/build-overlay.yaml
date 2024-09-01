@@ -19,9 +19,9 @@ jobs:
           ROSDEP_SOURCE: |
             rosdep.yaml
             https://raw.githubusercontent.com/v4hn/ros-o-builder/main/rosdep.yaml
-            https://raw.githubusercontent.com/v4hn/ros-o-builder/jammy-one/local.yaml
+            https://raw.githubusercontent.com/v4hn/ros-o-builder/jammy-one-unstable/local.yaml
           DEB_REPOSITORY: |
-            deb [trusted=yes] https://raw.githubusercontent.com/v4hn/ros-o-builder/jammy-one/ ./
+            deb [trusted=yes] https://raw.githubusercontent.com/v4hn/ros-o-builder/jammy-one-unstable/ ./
           CONTINUE_ON_ERROR: false
 
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
