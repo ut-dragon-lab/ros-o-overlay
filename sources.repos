@@ -1,4 +1,8 @@
 repositories:
+  moveit:
+    type: git
+    url: https://github.com/v4hn/moveit.git
+    version: ruckig-no-webclient
   moveit_task_constructor:
     type: git
     url: https://github.com/v4hn/moveit_task_constructor.git
