@@ -6,22 +6,26 @@ on:
 
 jobs:
   build-overlay:
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-24.04
     env:
       ROS_DISTRO: one
       DEB_DISTRO: jammy
+      UPSTREAM: https://raw.githubusercontent.com/v4hn/ros-o-builder-experimental/jammy-one/repository
     steps:
-      - uses: v4hn/ros-deb-builder-action@rosotest
+      - name: install Debian ROS packages
+        run: |
+          sudo add-apt-repository -y ppa:v-launchpad-jochen-sprickerhof-de/ros
+          sudo apt update
+      - uses: v4hn/ros-deb-builder-action@roso-noble
         with:
           ROS_DISTRO: ${{ env.ROS_DISTRO }}
           DEB_DISTRO: ${{ env.DEB_DISTRO }}
           REPOS_FILE: sources.repos
           ROSDEP_SOURCE: |
             rosdep.yaml
-            https://raw.githubusercontent.com/v4hn/ros-o-builder/main/rosdep.yaml
-            https://raw.githubusercontent.com/v4hn/ros-o-builder/jammy-one-unstable/local.yaml
+            ${{ env.UPSTREAM }}/local.yaml
           DEB_REPOSITORY: |
-            deb [trusted=yes] https://raw.githubusercontent.com/v4hn/ros-o-builder/jammy-one-unstable/ ./
+            deb [trusted=yes] ${{ env.UPSTREAM }} ./
           CONTINUE_ON_ERROR: true
 
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

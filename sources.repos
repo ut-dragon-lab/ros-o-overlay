@@ -1,9 +1,9 @@
 repositories:
-  moveit:
+  hpp-fcl:
     type: git
-    url: https://github.com/v4hn/moveit.git
-    version: ruckig-no-webclient
-  moveit_task_constructor:
+    url: https://github.com/humanoid-path-planner/hpp-fcl.git
+    version: devel
+  pinocchio:
     type: git
-    url: https://github.com/v4hn/moveit_task_constructor.git
-    version: master-deps-fixed
+    url: https://github.com/stack-of-tasks/pinocchio.git
+    version: master
