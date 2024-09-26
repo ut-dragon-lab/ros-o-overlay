@@ -23,6 +23,7 @@ jobs:
           REPOS_FILE: sources.repos
           ROSDEP_SOURCE: |
             rosdep.yaml
+            https://raw.githubusercontent.com/v4hn/ros-o-builder-experimental/main/rosdep.yaml
             ${{ env.UPSTREAM }}/local.yaml
           DEB_REPOSITORY: |
             deb [trusted=yes] ${{ env.UPSTREAM }} ./
