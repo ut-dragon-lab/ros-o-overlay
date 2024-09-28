@@ -1,5 +1,3 @@
 # ros-o-builder - Building deb packages for ROS-O.
 
-THIS IS AN EXPERIMENTAL REPOSITORY. DO NOT RELY ON IT (yet).
-
-This branch demonstrates how to build individual leaf packages on top of an existing repository.
+This repository demonstrates how to build [individual ROS package repositories](https://github.com/v4hn/ros-o-overlay/blob/main/sources.repos) on top of [an existing repository](https://github.com/v4hn/ros-o-overlay/blob/main/.github/workflows/build-overlay.yaml#L13).
