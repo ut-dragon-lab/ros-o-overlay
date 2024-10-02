@@ -10,7 +10,7 @@ jobs:
     env:
       ROS_DISTRO: one
       DEB_DISTRO: jammy
-      UPSTREAM: https://raw.githubusercontent.com/v4hn/ros-o-builder-experimental/jammy-one/repository
+      UPSTREAM: https://raw.githubusercontent.com/v4hn/ros-o-builder/jammy-one/repository
     steps:
       - name: install Debian ROS packages
         run: |
@@ -23,12 +23,11 @@ jobs:
           REPOS_FILE: sources.repos
           ROSDEP_SOURCE: |
             rosdep.yaml
-            https://raw.githubusercontent.com/v4hn/ros-o-builder-experimental/main/rosdep.yaml
             ${{ env.UPSTREAM }}/local.yaml
           DEB_REPOSITORY: |
             deb [trusted=yes] ${{ env.UPSTREAM }} ./
+          SBUILD_CONF: "$enable_network = 1;"
           CONTINUE_ON_ERROR: true
-
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           PUSH_ON_ERROR: true
           SQUASH_HISTORY: true
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
