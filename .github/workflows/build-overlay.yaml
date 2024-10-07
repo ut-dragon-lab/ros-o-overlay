@@ -20,6 +20,7 @@ jobs:
         with:
           ROS_DISTRO: ${{ env.ROS_DISTRO }}
           DEB_DISTRO: ${{ env.DEB_DISTRO }}
+          BRANCH: ${{ github.ref_name }}-${{ env.DEB_DISTRO }}-${{ env.ROS_DISTRO }}
           REPOS_FILE: sources.repos
           ROSDEP_SOURCE: |
             rosdep.yaml
