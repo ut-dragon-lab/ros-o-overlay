@@ -7,3 +7,7 @@ repositories:
     type: git
     url: https://github.com/stack-of-tasks/pinocchio.git
     version: master
+  fcl_catkin:
+    type: git
+    url: https://github.com/wxmerkt/fcl_catkin.git
+    version: master
