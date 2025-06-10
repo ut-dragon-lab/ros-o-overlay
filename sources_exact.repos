@@ -1,0 +1,5 @@
+repositories:
+  fcl_catkin:
+    type: git
+    url: https://github.com/wxmerkt/fcl_catkin.git
+    version: 1229bd544246af6dc7fd60060a9d78cb36c383ee

@@ -1,0 +1,2 @@
+Package,Version,URL,Status,Bloom Log,Build Log,Deb File,Installed Files
+fcl_catkin,0.6.1-11-g1229bd5-2025.06.10.02.42,https://github.com/wxmerkt/fcl_catkin/tree/master,success,fcl_catkin_0.6.1-11-g1229bd5-2025.06.10.02.42-bloom_generate.log,ros-one-fcl-catkin_0.6.1-11-g1229bd5-2025.06.10.02.42_amd64-2025-06-10T02:42:15Z.build,ros-one-fcl-catkin_0.6.1-11-g1229bd5-2025.06.10.02.42_amd64.deb,ros-one-fcl-catkin_0.6.1-11-g1229bd5-2025.06.10.02.42_amd64.files
