@@ -1,12 +1,4 @@
 repositories:
-  hpp-fcl:
-    type: git
-    url: https://github.com/humanoid-path-planner/hpp-fcl.git
-    version: devel
-  pinocchio:
-    type: git
-    url: https://github.com/stack-of-tasks/pinocchio.git
-    version: master
   fcl_catkin:
     type: git
     url: https://github.com/wxmerkt/fcl_catkin.git
